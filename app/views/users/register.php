@@ -22,12 +22,12 @@
                 </div>
                 <div class="form-group">
                     <label for="confirmed_password">Confirm Password : <sup>*</sup></label>
-                    <input type="password" name="confirm_password" class="form-control form-control-lg <?=(!empty($data['confirmed_password_error'])) ? 'is-invalid' : '';?>" value="<?$data['confirmed_password']; ?>">
-                    <span class="invalid-feedback"><?=$data['confirm_password_error'];?></span>
+                    <input type="password" name="confirmed_password" class="form-control form-control-lg <?=(!empty($data['confirmed_password_error'])) ? 'is-invalid' : '';?>" value="<?$data['confirmed_password']; ?>">
+                    <span class="invalid-feedback"><?=$data['confirmed_password_error'];?></span>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="submit" value="register" class="btn btn-success btn-block">
+                        <input type="submit" value="Register" class="btn btn-success btn-block">
                     </div>
                     <div class="col">
                         <a href="<?=URLROOT;?>/users/login"' value="login" class="btn btn-light btn-block">
