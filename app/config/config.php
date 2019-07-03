@@ -14,3 +14,5 @@ define('PUBLICROOT', dirname(dirname(dirname(__FILE__))). '/public/');
 define('URLROOT', 'http://192.168.33.10');
 // Site Name
 define('SITENAME', 'my-health-cloud');
+// App Version
+define('APPVERSION', '1.0.0');
