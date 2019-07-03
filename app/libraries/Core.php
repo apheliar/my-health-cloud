@@ -13,21 +13,21 @@ Class Core {
     protected $params = [];
 
     public function __construct(){
-        # print_r($this->getUrl());
-        # get url into $url
+        // print_r($this->getUrl());
+        // get url into $url
         $url = $this->getUrl();
-        # look in controllers for first folder in url
+        // look in controllers for first folder in url
         if(file_exists('../app/controllers/'. ucwords($url[0]). '.php')){
-            # if it exist, set $currentController to the first param
+            // if it exist, set $currentController to the first param
             $this->currentController = ucwords($url[0]);
-            # then, unset the first path into url
+            // then, unset the first path into url
             unset($url[0]);
         }
 
-        # require the controller
+        // require the controller
         require_once '../app/controllers/' . $this->currentController . '.php';
 
-        # instantiate controller class
+        // instantiate controller class
         $this->currentController = new $this->currentController;
 
         if(isset($url[1])){
@@ -36,9 +36,9 @@ Class Core {
                 unset($url[1]);
             }
         }
-        # Get parameters
+        // Get parameters
         $this->params = $url ? array_values($url) : [];
-        #  Call a callback with an array of parameters
+        //  Call a callback with an array of parameters
         call_user_func_array([$this->currentController,
             $this->currentMethod], $this->params);
 
