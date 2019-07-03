@@ -11,4 +11,4 @@ define ('APPROOT', dirname(dirname(__FILE__)));
 // Public Root
 define ('PUBLICROOT', dirname(dirname(dirname(__FILE__))). '/public/');
 // Site Name
-define('SITENAME', 'my-own-mvc-framework');
+define('SITENAME', 'my-health-cloud');

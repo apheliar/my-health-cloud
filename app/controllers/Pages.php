@@ -9,7 +9,7 @@ class Pages extends Controller {
     public function index(){
 
         $data = [
-            'title' => 'Welcome',
+            'title' => 'My Healthy Cloud',
         ];
         $this->view('pages/index', $data);
     }
